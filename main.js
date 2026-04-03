@@ -34,21 +34,21 @@ async function loadTelegramAvatar(username){
     const avatarUrl = `https://t.me/i/userpic/320/${username}.jpg`;
     // If specific container exists use it, else try generic mapping by id
     const explicitId = {
-      'sexuzperedoz':'tg-avatar',
-      'melonotmelo':'tg-avatar-melo',
-      'amvwh1zy':'tg-avatar-whizy',
-      'nettspendg':'tg-avatar-renix',
+      'reeyanu':'tg-avatar',
+      '':'tg-avatar-1',
+      '':'tg-avatar-2',
+      '':'tg-avatar-3',
     }[username];
     const img = document.getElementById(explicitId || 'tg-avatar');
     if (img) { img.src = avatarUrl; img.onload = ()=> img.setAttribute('aria-hidden','false'); }
   }catch{}
 }
-loadTelegramAvatar('sexuzperedoz');
+loadTelegramAvatar('reeyanu');
 
 // Friends avatars
-loadTelegramAvatar('melonotmelo');
-loadTelegramAvatar('amvwh1zy');
-loadTelegramAvatar('nettspendg');
+loadTelegramAvatar('');
+loadTelegramAvatar('');
+loadTelegramAvatar('');
 
 // Copy buttons (donations)
 document.querySelectorAll('.copy').forEach((btn)=>{
