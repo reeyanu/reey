@@ -35,20 +35,12 @@ async function loadTelegramAvatar(username){
     // If specific container exists use it, else try generic mapping by id
     const explicitId = {
       'reeyanu':'tg-avatar',
-      '':'tg-avatar-1',
-      '':'tg-avatar-2',
-      '':'tg-avatar-3',
     }[username];
     const img = document.getElementById(explicitId || 'tg-avatar');
     if (img) { img.src = avatarUrl; img.onload = ()=> img.setAttribute('aria-hidden','false'); }
   }catch{}
 }
 loadTelegramAvatar('reeyanu');
-
-// Friends avatars
-loadTelegramAvatar('');
-loadTelegramAvatar('');
-loadTelegramAvatar('');
 
 // Copy buttons (donations)
 document.querySelectorAll('.copy').forEach((btn)=>{
