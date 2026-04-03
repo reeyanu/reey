@@ -31,7 +31,7 @@ document.querySelectorAll('[data-reveal]').forEach((el)=>io.observe(el));
 async function loadTelegramAvatar(username){
   try{
     // Public avatar via t.me/i/userpic proxy (served by Telegram)
-    const avatarUrl = `https://t.me/i/userpic/320/${username}.jpg`;
+    const avatarUrl = `https://t.me/i/userpic/320/${username}.jpg?${Date.now()}`;
     // If specific container exists use it, else try generic mapping by id
     const explicitId = {
       'reeyanu':'tg-avatar',
